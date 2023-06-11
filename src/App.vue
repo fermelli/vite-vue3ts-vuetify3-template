@@ -5,12 +5,13 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div>
     <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+      <v-img src="/vite.svg" class="logo" alt="Vite logo"></v-img>
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <v-img src="./assets/vue.svg" class="logo vue" alt="Vue logo"></v-img>
     </a>
   </div>
+
   <HelloWorld msg="Vite + Vue" />
 </template>
 
@@ -21,9 +22,11 @@ import HelloWorld from './components/HelloWorld.vue'
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
