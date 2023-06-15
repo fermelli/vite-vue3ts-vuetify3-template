@@ -18,8 +18,28 @@ const layout = computed(() => {
 
 <template>
   <component :is="layout">
-    <router-view></router-view>
+    <router-view v-slot="{ Component, route: slotRoute }">
+      <transition
+        :name="slotRoute.meta.transitionName as string || 'fade'"
+        mode="out-in"
+      >
+        <component
+          :is="Component"
+          :key="slotRoute.path"
+        />
+      </transition>
+    </router-view>
   </component>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

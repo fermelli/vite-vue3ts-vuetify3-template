@@ -5,6 +5,7 @@ export type LayoutsTypes = "app-layout";
 export type Route = RouteRecordRaw & {
   meta: {
     layout: LayoutsTypes;
+    transitionName?: string;
   };
 };
 

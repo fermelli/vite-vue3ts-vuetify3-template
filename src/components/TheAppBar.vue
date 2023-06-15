@@ -23,12 +23,14 @@ defineProps({
 
     <v-menu location="bottom">
       <template #activator="{ props }">
-        <v-avatar
-          size="45"
+        <v-btn
           v-bind="props"
+          icon
         >
-          <v-icon icon="mdi-account-circle"></v-icon>
-        </v-avatar>
+          <v-avatar size="45">
+            <v-icon icon="mdi-account-circle"></v-icon>
+          </v-avatar>
+        </v-btn>
       </template>
 
       <!-- TODO: user -->
