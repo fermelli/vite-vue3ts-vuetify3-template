@@ -18,6 +18,22 @@ const routes: Route[] = [
       layout: "app-layout",
     },
   },
+  {
+    path: "/contributors",
+    name: "contributors",
+    component: () => import("@/views/ContributorsView.vue"),
+    meta: {
+      layout: "app-layout",
+    },
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: () => import("@/views/ContactView.vue"),
+    meta: {
+      layout: "app-layout",
+    },
+  },
 ];
 
 const router = createRouter({

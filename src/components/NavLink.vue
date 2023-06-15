@@ -11,10 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <v-list-item
-    :value="route"
-    :to="{ name: route.name }"
-  >
+  <v-list-item :to="{ name: route.name }">
     <template #prepend>
       <v-icon :icon="route.icon"></v-icon>
     </template>

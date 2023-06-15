@@ -8,11 +8,13 @@ export type Route = RouteRecordRaw & {
   };
 };
 
+export type NonEmptyArray<T> = [T, ...T[]];
+
 export interface NavRoute {
   name: string;
   icon: string;
   text: string;
-  children?: NavRoute[];
+  children?: NonEmptyArray<NavRoute>;
 }
 
 export const navRoutes: NavRoute[] = [
@@ -30,6 +32,23 @@ export const navRoutes: NavRoute[] = [
         name: "about",
         icon: "mdi-information-outline",
         text: "About",
+      },
+      {
+        name: "contributors",
+        icon: "mdi-account-group",
+        text: "Contributors",
+      },
+    ],
+  },
+  {
+    name: "personal-data",
+    icon: "mdi-account",
+    text: "Personal Data",
+    children: [
+      {
+        name: "contact",
+        icon: "mdi-phone",
+        text: "Contact",
       },
     ],
   },
