@@ -1,28 +1,10 @@
-import { RouteRecordRaw } from "vue-router";
+import { NavRoute } from "@/types/routes";
 
-export type LayoutsTypes = "app-layout";
-
-export type Route = RouteRecordRaw & {
-  meta: {
-    layout: LayoutsTypes;
-    transitionName?: string;
-  };
-};
-
-export type NonEmptyArray<T> = [T, ...T[]];
-
-export interface NavRoute {
-  name: string;
-  icon: string;
-  text: string;
-  children?: NonEmptyArray<NavRoute>;
-}
-
-export const navRoutes: NavRoute[] = [
+const navRoutes: NavRoute[] = [
   {
-    name: "home",
-    icon: "mdi-home",
-    text: "Home",
+    name: "dashboard",
+    icon: "mdi-dashboard",
+    text: "Dashboard",
   },
   {
     name: "info",
@@ -54,3 +36,5 @@ export const navRoutes: NavRoute[] = [
     ],
   },
 ];
+
+export default navRoutes;

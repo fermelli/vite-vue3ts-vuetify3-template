@@ -10,7 +10,7 @@ import TheNavigationDrawer from "@/components/TheNavigationDrawer.vue";
     <the-navigation-drawer></the-navigation-drawer>
 
     <v-main>
-      <v-container>
+      <v-container fluid>
         <slot></slot>
       </v-container>
     </v-main>

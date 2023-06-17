@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useTheNavigationDrawerStore from "@/store/modules/theNavigationDrawerStore";
+import useTheNavigationDrawerStore from "@/store/modules/the-navigation-drawer-store";
 
 const theNavigationDrawerStore = useTheNavigationDrawerStore();
 

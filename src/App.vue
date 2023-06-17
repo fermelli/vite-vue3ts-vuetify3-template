@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-import AppLayout from "@/layouts/AppLayout.vue";
-import { LayoutsTypes } from "@/utils";
+import AdminLayout from "@/layouts/AdminLayout.vue";
+import PageLayoutVue from "@/layouts/PageLayout.vue";
+import { LayoutsTypes } from "@/types/layouts";
 
 const route = useRoute();
 
 const layout = computed(() => {
   switch (route.meta.layout as LayoutsTypes) {
-    case "app-layout":
-      return AppLayout;
+    case "admin-layout":
+      return AdminLayout;
+    case "page-layout":
+      return PageLayoutVue;
     default:
-      return AppLayout;
+      return AdminLayout;
   }
 });
 </script>
