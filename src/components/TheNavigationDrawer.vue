@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { NavRoute } from "@/types/routes";
-import { navRoutes } from "@/util";
+import { navRoutes } from "@/utils";
 import NavLink from "@/components/NavLink.vue";
 import NavLinkGroup from "./NavLinkGroup.vue";
 import useTheNavigationDrawerStore from "@/store/modules/the-navigation-drawer-store";
