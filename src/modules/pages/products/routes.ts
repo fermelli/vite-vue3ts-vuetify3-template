@@ -2,17 +2,17 @@ import { Route } from "@/types/routes";
 
 const routes: Route[] = [
   {
-    path: "/productos",
-    name: "productos",
-    component: () => import("./views/ProductosView.vue"),
+    path: "/products",
+    name: "products",
+    component: () => import("./views/ProductsView.vue"),
     meta: {
       layout: "page-layout",
     },
   },
   {
-    path: "/productos/:id",
-    name: "producto",
-    component: () => import("./views/ProductoView.vue"),
+    path: "/products/:id",
+    name: "product",
+    component: () => import("./views/ProductView.vue"),
     props: true,
     meta: {
       layout: "page-layout",
