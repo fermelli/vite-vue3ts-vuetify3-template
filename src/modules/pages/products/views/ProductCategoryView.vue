@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps({
-  id: {
-    type: [String, Number],
+  category: {
+    type: String,
     required: true,
   },
 });
@@ -9,6 +9,8 @@ defineProps({
 
 <template>
   <div>
-    <h1>ProductoView {{ id }}</h1>
+    <h1>ProductoView</h1>
+
+    <p>Category: {{ category }}</p>
   </div>
 </template>

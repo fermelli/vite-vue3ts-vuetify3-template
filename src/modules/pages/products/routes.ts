@@ -10,9 +10,9 @@ const routes: Route[] = [
     },
   },
   {
-    path: "/products/:id",
-    name: "product",
-    component: () => import("./views/ProductView.vue"),
+    path: "/products/:category",
+    name: "product-category",
+    component: () => import("./views/ProductCategoryView.vue"),
     props: true,
     meta: {
       layout: "page-layout",
