@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavRoute } from "@/types/routes";
+import { NavRoute } from "@/interfaces/nav-route";
 import NavLink from "@/components/NavLink.vue";
 
 defineProps({

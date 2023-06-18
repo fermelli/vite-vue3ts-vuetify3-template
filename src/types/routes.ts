@@ -9,10 +9,3 @@ export type Route = RouteRecordRaw & {
 };
 
 export type NonEmptyArray<T> = [T, ...T[]];
-
-export interface NavRoute {
-  name: string;
-  icon: string;
-  text: string;
-  children?: NonEmptyArray<NavRoute>;
-}

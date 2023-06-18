@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
-import { NavRoute } from "@/utils";
+import { NavRoute } from "@/interfaces/nav-route";
 
 defineProps({
   route: {

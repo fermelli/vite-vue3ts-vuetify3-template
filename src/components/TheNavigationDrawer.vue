@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { NavRoute } from "@/types/routes";
+import { NavRoute } from "@/interfaces/nav-route";
 import { navRoutes } from "@/utils";
 import NavLink from "@/components/NavLink.vue";
 import NavLinkGroup from "./NavLinkGroup.vue";

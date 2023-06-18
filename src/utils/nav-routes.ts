@@ -1,9 +1,9 @@
-import { NavRoute } from "@/types/routes";
+import { NavRoute } from "@/interfaces/nav-route";
 
 const navRoutes: NavRoute[] = [
   {
     name: "dashboard",
-    icon: "mdi-dashboard",
+    icon: "mdi-view-dashboard",
     text: "Dashboard",
   },
   {
