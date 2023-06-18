@@ -1,3 +1,4 @@
 import navRoutes from "./nav-routes";
+import navBarMenuItems from "./nav-bar-menu-items";
 
-export { navRoutes };
+export { navRoutes, navBarMenuItems };

@@ -1,16 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheNavBar from "@/components/TheNavBar.vue";
+</script>
 
 <template>
+  <the-nav-bar></the-nav-bar>
+
   <v-layout>
     <v-main>
       <v-container fluid>
-        <div>
-          <router-link :to="{ name: 'dashboard' }">Dashboard</router-link> |
-          <router-link :to="{ name: 'home' }">Home</router-link> |
-          <router-link :to="{ name: 'productos' }">Productos</router-link> |
-          <router-link :to="{ name: 'producto', params: { id: 100 } }">Producto</router-link>
-        </div>
-
         <slot></slot>
       </v-container>
     </v-main>
