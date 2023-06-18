@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <v-list-group
-    :value="route.name"
+    :value="route.text"
     :prepend-icon="route.icon"
   >
     <template #activator="{ props }">

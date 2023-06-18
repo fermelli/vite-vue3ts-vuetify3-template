@@ -2,34 +2,34 @@ import { NavRoute } from "@/interfaces/nav-route";
 
 const navRoutes: NavRoute[] = [
   {
-    name: "dashboard",
+    to: { name: "dashboard" },
     icon: "mdi-view-dashboard",
     text: "Dashboard",
   },
   {
-    name: "info",
+    to: { name: "info" },
     icon: "mdi-information",
     text: "Info",
     children: [
       {
-        name: "about",
+        to: { name: "about" },
         icon: "mdi-information-outline",
         text: "About",
       },
       {
-        name: "contributors",
+        to: { name: "contributors" },
         icon: "mdi-account-group",
         text: "Contributors",
       },
     ],
   },
   {
-    name: "personal-data",
+    to: { name: "personal-data" },
     icon: "mdi-account",
     text: "Personal Data",
     children: [
       {
-        name: "contact",
+        to: { name: "contact" },
         icon: "mdi-phone",
         text: "Contact",
       },
