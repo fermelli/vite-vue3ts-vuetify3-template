@@ -5,7 +5,7 @@ import TheNavigationDrawer from "@/components/TheNavigationDrawer.vue";
 
 <template>
   <v-layout>
-    <the-app-bar title="My App" />
+    <the-app-bar title="Admin" />
 
     <the-navigation-drawer></the-navigation-drawer>
 
