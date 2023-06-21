@@ -1,4 +1,4 @@
-import { NavRoute } from "@/interfaces/nav-route";
+import { NavRoute } from "@/interfaces/nav-route.interface";
 
 const navBarMenuItems: NavRoute[] = [
   {

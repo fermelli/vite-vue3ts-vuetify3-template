@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { NavRoute } from "@/interfaces/nav-route";
+import { NavRoute } from "@/interfaces/nav-route.interface";
 
 defineProps({
   menuItem: {
@@ -67,3 +67,4 @@ const menu = ref(false);
     </v-list>
   </v-menu>
 </template>
+@/interfaces/nav-route.interface

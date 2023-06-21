@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavRoute } from "@/interfaces/nav-route";
+import { NavRoute } from "@/interfaces/nav-route.interface";
 
 defineProps({
   route: {
@@ -18,3 +18,4 @@ defineProps({
     <v-list-item-title>{{ route.text }}</v-list-item-title>
   </v-list-item>
 </template>
+@/interfaces/nav-route.interface

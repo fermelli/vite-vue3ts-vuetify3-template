@@ -1,4 +1,4 @@
-import { NonEmptyArray } from "@/types/routes";
+import { NonEmptyArray } from "@/types/routes.type";
 import { RouteLocationRaw } from "vue-router";
 
 export interface NavRoute {

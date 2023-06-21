@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavRoute } from "@/interfaces/nav-route";
+import { NavRoute } from "@/interfaces/nav-route.interface";
 import NavLink from "@/components/NavLink.vue";
 
 defineProps({
@@ -29,3 +29,4 @@ defineProps({
     />
   </v-list-group>
 </template>
+@/interfaces/nav-route.interface

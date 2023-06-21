@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from "vue-router";
-import { LayoutsTypes } from "./layouts";
+import { LayoutsTypes } from "./layouts.type";
 
 export type Route = RouteRecordRaw & {
   meta: {

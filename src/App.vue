@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import AdminLayout from "@/layouts/AdminLayout.vue";
 import PageLayoutVue from "@/layouts/PageLayout.vue";
-import { LayoutsTypes } from "@/types/layouts";
+import { LayoutsTypes } from "@/types/layouts.type";
 
 const route = useRoute();
 
@@ -46,3 +46,4 @@ const layout = computed(() => {
   opacity: 0;
 }
 </style>
+@/types/layouts.type

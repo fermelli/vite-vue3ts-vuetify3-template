@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { NavRoute } from "@/interfaces/nav-route";
+import { NavRoute } from "@/interfaces/nav-route.interface";
 import { navBarMenuItems } from "@/utils";
 import NavBarMenuItem from "@/components/NavBarMenuItem.vue";
 
@@ -44,3 +44,4 @@ const menuItems = ref<NavRoute[]>(navBarMenuItems);
   transform: rotate(180deg);
 }
 </style>
+@/interfaces/nav-route.interface @/utils/index.util

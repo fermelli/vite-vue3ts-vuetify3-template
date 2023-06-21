@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { NavRoute } from "@/interfaces/nav-route";
+import { NavRoute } from "@/interfaces/nav-route.interface";
 import { navRoutes } from "@/utils";
 import NavLink from "@/components/NavLink.vue";
 import NavLinkGroup from "./NavLinkGroup.vue";
@@ -29,3 +29,4 @@ const { isOpen, openedGroups } = storeToRefs(theNavigationDrawerStore);
     </v-list>
   </v-navigation-drawer>
 </template>
+@/interfaces/nav-route.interface @/utils/index.util

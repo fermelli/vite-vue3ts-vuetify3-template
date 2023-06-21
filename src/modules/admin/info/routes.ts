@@ -1,4 +1,4 @@
-import { Route } from "@/types/routes";
+import { Route } from "@/types/routes.type";
 
 const routes: Route[] = [
   {
