@@ -41,12 +41,15 @@ defineProps({
 
         <v-divider></v-divider>
 
-        <v-list-item link>
-          <v-list-item-title> Perfil de Usuario </v-list-item-title>
+        <v-list-item
+          link
+          :to="{ name: 'user-profile' }"
+        >
+          <v-list-item-title>User Profile</v-list-item-title>
         </v-list-item>
 
         <v-list-item link>
-          <v-list-item-title> Cerrar Sesión </v-list-item-title>
+          <v-list-item-title>Logout</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>

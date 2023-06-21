@@ -1,4 +1,4 @@
-import { Route } from "@/utils";
+import { Route } from "@/types/routes";
 
 const routes: Route[] = [
   {
@@ -6,7 +6,15 @@ const routes: Route[] = [
     name: "contact",
     component: () => import("./views/ContactView.vue"),
     meta: {
-      layout: "app-layout",
+      layout: "admin-layout",
+    },
+  },
+  {
+    path: "/personal-data/user-profile",
+    name: "user-profile",
+    component: () => import("./views/UserProfileView.vue"),
+    meta: {
+      layout: "admin-layout",
     },
   },
 ];

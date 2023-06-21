@@ -33,6 +33,11 @@ const navRoutes: NavRoute[] = [
         icon: "mdi-phone",
         text: "Contact",
       },
+      {
+        to: { name: "user-profile" },
+        icon: "mdi-account-circle",
+        text: "User Profile",
+      },
     ],
   },
 ];
