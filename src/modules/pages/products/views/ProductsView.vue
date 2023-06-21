@@ -26,14 +26,22 @@ onMounted(async () => {
     <h1>ProductosView</h1>
 
     <div
-      v-if="products.length === 0"
+      v-if="loading || products.length === 0"
       class="d-flex justify-center items-center py-6"
     >
       <v-progress-circular
+        v-if="loading"
         model-value="20"
         :size="40"
         :indeterminate="loading"
       ></v-progress-circular>
+
+      <p
+        v-else-if="products.length === 0"
+        class="text-center"
+      >
+        No products retrieved
+      </p>
     </div>
 
     <product-table
