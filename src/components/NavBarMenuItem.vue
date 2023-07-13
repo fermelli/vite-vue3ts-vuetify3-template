@@ -15,7 +15,7 @@ const menu = ref(false);
 <template>
   <v-btn
     v-if="!menuItem.children"
-    class="text-none"
+    class="text-none ml-4"
     :to="menuItem.to"
   >
     <template #append>
@@ -32,7 +32,7 @@ const menu = ref(false);
   >
     <template #activator="{ isActive, props }">
       <v-btn
-        class="text-none"
+        class="text-none ml-4"
         v-bind="props"
       >
         {{ menuItem.text }}
