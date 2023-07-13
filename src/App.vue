@@ -46,4 +46,3 @@ const layout = computed(() => {
   opacity: 0;
 }
 </style>
-@/types/layouts.type
