@@ -1,4 +1,4 @@
-const networkConfig = {
+export default {
   baseURL: import.meta.env.VITE_API_URL,
   contentType: "application/json;charset=UTF-8",
   accept: "application/json",
@@ -20,26 +20,3 @@ const networkConfig = {
   internalServerCode: 500,
   serviceUnavailableCode: 503,
 };
-
-export const {
-  baseURL,
-  contentType,
-  accept,
-  errorNetworkCode,
-  messageDuration,
-  timeout,
-  okCode,
-  createdCode,
-  notContentCode,
-  movedPermanentlyCode,
-  badRequestCode,
-  unauthorizedCode,
-  forbiddenCode,
-  notFoundCode,
-  methodNotAllowCode,
-  requestTimeoutCode,
-  unprocessableEntityCode,
-  tooManyRequestsCode,
-  internalServerCode,
-  serviceUnavailableCode,
-} = networkConfig;
