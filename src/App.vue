@@ -4,8 +4,11 @@ import { useRoute } from "vue-router";
 import AdminLayout from "@/layouts/AdminLayout.vue";
 import PageLayoutVue from "@/layouts/PageLayout.vue";
 import { LayoutsTypes } from "@/types/layouts.type";
+import { useSetTheme } from "@/themes/use-set-theme";
 
 const route = useRoute();
+
+useSetTheme();
 
 const layout = computed(() => {
   switch (route.meta.layout as LayoutsTypes) {
@@ -46,3 +49,4 @@ const layout = computed(() => {
   opacity: 0;
 }
 </style>
+./themes/use-set-theme

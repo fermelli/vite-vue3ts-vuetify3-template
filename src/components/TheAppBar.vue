@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import useTheNavigationDrawerStore from "@/store/modules/the-navigation-drawer-store";
+import { useToggleTheme } from "@/themes/use-toggle-theme";
 
 const theNavigationDrawerStore = useTheNavigationDrawerStore();
 
@@ -9,10 +10,12 @@ defineProps({
     required: true,
   },
 });
+
+const { toggleTheme, iconChangeTheme } = useToggleTheme();
 </script>
 
 <template>
-  <v-app-bar>
+  <v-app-bar color="primary">
     <v-app-bar-nav-icon @click.stop="theNavigationDrawerStore.toogle()" />
 
     <v-app-bar-title>
@@ -27,7 +30,10 @@ defineProps({
           v-bind="props"
           icon
         >
-          <v-avatar size="45">
+          <v-avatar
+            size="45"
+            color="primary"
+          >
             <v-icon icon="mdi-account-circle"></v-icon>
           </v-avatar>
         </v-btn>
@@ -46,6 +52,14 @@ defineProps({
           :to="{ name: 'user-profile' }"
         >
           <v-list-item-title>User Profile</v-list-item-title>
+        </v-list-item>
+
+        <v-list-item
+          link
+          :append-icon="iconChangeTheme"
+          @click="toggleTheme"
+        >
+          <v-list-item-title>Change Theme</v-list-item-title>
         </v-list-item>
 
         <v-list-item link>

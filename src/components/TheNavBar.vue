@@ -3,8 +3,11 @@ import { ref } from "vue";
 import { NavRoute } from "@/interfaces/nav-route.interface";
 import { navBarMenuItems } from "@/utils";
 import NavBarMenuItem from "@/components/NavBarMenuItem.vue";
+import { useToggleTheme } from "@/themes/use-toggle-theme";
 
 const menuItems = ref<NavRoute[]>(navBarMenuItems);
+
+const { toggleTheme, iconChangeTheme } = useToggleTheme();
 </script>
 
 <template>
@@ -21,12 +24,18 @@ const menuItems = ref<NavRoute[]>(navBarMenuItems);
           width="40"
           height="40"
         />
-
-        <span>My App</span>
       </router-link>
+
+      <v-toolbar-title>My App</v-toolbar-title>
     </template>
 
     <v-spacer></v-spacer>
+
+    <v-btn
+      :icon="iconChangeTheme"
+      @click="toggleTheme"
+    >
+    </v-btn>
 
     <nav-bar-menu-item
       v-for="(menuItem, index) in menuItems"
