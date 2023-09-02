@@ -23,11 +23,6 @@ const navBarMenuItems: NavRoute[] = [
       },
     ],
   },
-  {
-    to: { name: "dashboard" },
-    icon: "mdi-view-dashboard",
-    text: "Dashboard",
-  },
 ];
 
 export default navBarMenuItems;

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import useTheNavigationDrawerStore from "@/store/modules/the-navigation-drawer-store";
+import useAdminNavigationDrawerStore from "@/store/modules/admin-navigation-drawer.store";
 import { useToggleTheme } from "@/themes/use-toggle-theme";
 
-const theNavigationDrawerStore = useTheNavigationDrawerStore();
+const { toggle } = useAdminNavigationDrawerStore();
 
 defineProps({
   title: {
@@ -16,7 +16,7 @@ const { toggleTheme, iconChangeTheme } = useToggleTheme();
 
 <template>
   <v-app-bar color="primary">
-    <v-app-bar-nav-icon @click.stop="theNavigationDrawerStore.toogle()" />
+    <v-app-bar-nav-icon @click.stop="toggle" />
 
     <v-app-bar-title>
       {{ title }}
