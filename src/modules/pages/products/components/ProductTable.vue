@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { PropType } from "vue";
-import { ProductInterface } from "@/interfaces/product.interface";
+import { Product } from "@/interfaces/product.interface";
 
 defineProps({
   products: {
-    type: Array as PropType<ProductInterface[]>,
+    type: Array as PropType<Product[]>,
     required: true,
   },
 });

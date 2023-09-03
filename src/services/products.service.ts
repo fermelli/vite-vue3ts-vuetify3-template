@@ -1,8 +1,8 @@
-import { ProductInterface } from "@/interfaces/product.interface";
+import { Product } from "@/interfaces/product.interface";
 import service from "./service";
 
 const get = () => {
-  return service.get<ProductInterface[]>("/products");
+  return service.get<Product[]>("/products");
 };
 
 export default {

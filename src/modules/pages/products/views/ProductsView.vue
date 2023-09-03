@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { productsService } from "@/services";
 import { onMounted, ref } from "vue";
-import { ProductInterface } from "@/interfaces/product.interface";
+import { Product } from "@/interfaces/product.interface";
 import ProductTable from "../components/ProductTable.vue";
 
-const products = ref<ProductInterface[]>([]);
+const products = ref<Product[]>([]);
 const loading = ref<boolean>(false);
 
 onMounted(async () => {
