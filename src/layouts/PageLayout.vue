@@ -57,7 +57,7 @@ watch(
             <v-icon :icon="iconChangeTheme"></v-icon>
           </template>
 
-          <v-list-item-title>Cambiar tema</v-list-item-title>
+          <v-list-item-title>Change Theme</v-list-item-title>
         </v-list-item>
       </template>
 
