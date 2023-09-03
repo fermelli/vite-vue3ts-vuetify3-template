@@ -7,8 +7,11 @@ import ProductTable from "../components/ProductTable.vue";
 const products = ref<Product[]>([]);
 const loading = ref<boolean>(false);
 
-onMounted(async () => {
+onMounted(() => getProducts());
+
+const getProducts = async () => {
   loading.value = true;
+
   try {
     const response = await productsService.get();
 
@@ -18,12 +21,24 @@ onMounted(async () => {
   } finally {
     loading.value = false;
   }
-});
+};
 </script>
 
 <template>
   <div>
-    <h1>ProductosView</h1>
+    <div class="d-flex mb-4">
+      <h1>ProductosView</h1>
+
+      <v-btn
+        class="ml-2"
+        color="primary"
+        :disabled="loading"
+        icon
+        @click="getProducts"
+      >
+        <v-icon>mdi-refresh</v-icon>
+      </v-btn>
+    </div>
 
     <div
       v-if="loading || products.length === 0"
