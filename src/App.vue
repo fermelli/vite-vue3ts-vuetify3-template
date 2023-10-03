@@ -2,9 +2,10 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import AdminLayout from "@/layouts/AdminLayout.vue";
-import PageLayoutVue from "@/layouts/PageLayout.vue";
+import PageLayout from "@/layouts/PageLayout.vue";
 import { LayoutsTypes } from "@/types/layouts.type";
 import { useSetTheme } from "@/themes/use-set-theme";
+import BlankLayout from "./layouts/BlankLayout.vue";
 
 const route = useRoute();
 
@@ -15,9 +16,11 @@ const layout = computed(() => {
     case "admin-layout":
       return AdminLayout;
     case "page-layout":
-      return PageLayoutVue;
+      return PageLayout;
+    case "blank-layout":
+      return BlankLayout;
     default:
-      return AdminLayout;
+      return BlankLayout;
   }
 });
 </script>
