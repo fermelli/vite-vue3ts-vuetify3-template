@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import useAdminNavigationDrawerStore from "@/store/modules/admin-navigation-drawer.store";
+import useAuthStore from "@/store/modules/auth.store";
 import { useToggleTheme } from "@/themes/use-toggle-theme";
 
 const { toggle } = useAdminNavigationDrawerStore();
+const authStore = useAuthStore();
 
 defineProps({
   title: {
@@ -12,6 +14,7 @@ defineProps({
 });
 
 const { toggleTheme, iconChangeTheme } = useToggleTheme();
+const { logout } = authStore;
 </script>
 
 <template>
@@ -62,7 +65,10 @@ const { toggleTheme, iconChangeTheme } = useToggleTheme();
           <v-list-item-title>Change Theme</v-list-item-title>
         </v-list-item>
 
-        <v-list-item link>
+        <v-list-item
+          link
+          @click="logout"
+        >
           <v-list-item-title>Logout</v-list-item-title>
         </v-list-item>
       </v-list>
