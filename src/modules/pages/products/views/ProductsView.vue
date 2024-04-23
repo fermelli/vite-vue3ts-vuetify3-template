@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { productsService } from "@/services";
-import { onMounted, ref } from "vue";
 import { Product } from "@/interfaces/product.interface";
+import { productsService } from "@/services";
+import { ref, onMounted } from "vue";
 import ProductTable from "../components/ProductTable.vue";
 
 const products = ref<Product[]>([]);

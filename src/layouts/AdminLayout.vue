@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import TheAppBar from "@/components/TheAppBar.vue";
-import NavigationDrawer from "@/components/NavigationDrawer.vue";
 import { NavRoute } from "@/interfaces/nav-route.interface";
 import useAdminNavigationDrawerStore from "@/store/modules/admin-navigation-drawer.store";
 import { navRoutes } from "@/utils";
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
+import TheAppBar from "@/components/TheAppBar.vue";
+import NavigationDrawer from "@/components/NavigationDrawer.vue";
 
 const adminNavigationDrawerStore = useAdminNavigationDrawerStore();
-const { setIsOpen, setOpenedGroups } = adminNavigationDrawerStore;
 const { isOpen, openedGroups } = storeToRefs(adminNavigationDrawerStore);
 const routes = ref<NavRoute[]>(navRoutes);
+
+const { setIsOpen, setOpenedGroups } = adminNavigationDrawerStore;
 </script>
 
 <template>

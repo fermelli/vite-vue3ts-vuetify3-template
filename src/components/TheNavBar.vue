@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { NavRoute } from "@/interfaces/nav-route.interface";
-import { navBarMenuItems } from "@/utils";
-import NavBarMenuItem from "@/components/NavBarMenuItem.vue";
-import { useToggleTheme } from "@/themes/use-toggle-theme";
-import { useDisplay } from "vuetify";
-import usePageNavigationDrawerStore from "@/store/modules/page-navigation-drawer.store";
 import useAuthStore from "@/store/modules/auth.store";
+import usePageNavigationDrawerStore from "@/store/modules/page-navigation-drawer.store";
+import { useToggleTheme } from "@/themes/use-toggle-theme";
+import { navBarMenuItems } from "@/utils";
 import { storeToRefs } from "pinia";
-
-const menuItems = ref<NavRoute[]>(navBarMenuItems);
-
-const { toggleTheme, iconChangeTheme } = useToggleTheme();
+import { ref } from "vue";
+import { useDisplay } from "vuetify";
+import NavBarMenuItem from "./NavBarMenuItem.vue";
 
 const authStore = useAuthStore();
-const { signIn, logout } = authStore;
-const { isAuthenticated } = storeToRefs(authStore);
-
 const { width } = useDisplay();
+const { isAuthenticated } = storeToRefs(authStore);
+const { iconChangeTheme, toggleTheme } = useToggleTheme();
+const menuItems = ref<NavRoute[]>(navBarMenuItems);
 
+const { signIn, logout } = authStore;
 const { toggle } = usePageNavigationDrawerStore();
 </script>
 

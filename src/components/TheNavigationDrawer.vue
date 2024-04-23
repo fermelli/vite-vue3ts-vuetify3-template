@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { NavRoute } from "@/interfaces/nav-route.interface";
-import { navRoutes } from "@/utils";
-import NavLink from "@/components/NavLink.vue";
-import NavLinkGroup from "./NavLinkGroup.vue";
 import useTheNavigationDrawerStore from "@/store/modules/the-navigation-drawer-store";
+import { navRoutes } from "@/utils";
 import { storeToRefs } from "pinia";
+import { ref } from "vue";
+import NavLinkGroup from "./NavLinkGroup.vue";
+import NavLink from "./NavLink.vue";
 
-const routes = ref<NavRoute[]>(navRoutes);
 const theNavigationDrawerStore = useTheNavigationDrawerStore();
 const { isOpen, openedGroups } = storeToRefs(theNavigationDrawerStore);
+const routes = ref<NavRoute[]>(navRoutes);
 </script>
 
 <template>

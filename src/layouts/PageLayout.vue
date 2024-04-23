@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import NavLink from "@/components/NavLink.vue";
-import NavigationDrawer from "@/components/NavigationDrawer.vue";
-import TheNavBar from "@/components/TheNavBar.vue";
 import { NavRoute } from "@/interfaces/nav-route.interface";
 import useAuthStore from "@/store/modules/auth.store";
 import usePageNavigationDrawerStore from "@/store/modules/page-navigation-drawer.store";
@@ -10,19 +7,20 @@ import { navBarMenuItems } from "@/utils";
 import { storeToRefs } from "pinia";
 import { ref, watch } from "vue";
 import { useDisplay } from "vuetify";
-
-const pageNavigationDrawerStore = usePageNavigationDrawerStore();
-const { setIsOpen, setOpenedGroups } = pageNavigationDrawerStore;
-const { isOpen, openedGroups } = storeToRefs(pageNavigationDrawerStore);
-const routes = ref<NavRoute[]>(navBarMenuItems);
-
-const { toggleTheme, iconChangeTheme } = useToggleTheme();
+import TheNavBar from "@/components/TheNavBar.vue";
+import NavigationDrawer from "@/components/NavigationDrawer.vue";
+import NavLink from "@/components/NavLink.vue";
 
 const authStore = useAuthStore();
-const { signIn, logout } = authStore;
-const { isAuthenticated } = storeToRefs(authStore);
-
+const pageNavigationDrawerStore = usePageNavigationDrawerStore();
 const { width } = useDisplay();
+const { iconChangeTheme, toggleTheme } = useToggleTheme();
+const { isOpen, openedGroups } = storeToRefs(pageNavigationDrawerStore);
+const { isAuthenticated } = storeToRefs(authStore);
+const routes = ref<NavRoute[]>(navBarMenuItems);
+
+const { setIsOpen, setOpenedGroups } = pageNavigationDrawerStore;
+const { signIn, logout } = authStore;
 
 watch(
   width,

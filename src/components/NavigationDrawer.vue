@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
-import NavLink from "@/components/NavLink.vue";
-import NavLinkGroup from "./NavLinkGroup.vue";
 import { NavRoute } from "@/interfaces/nav-route.interface";
 import { LocationNavigationDrawer } from "@/types/utils.type";
-
-defineEmits<{
-  (e: "update:isOpen", value: boolean): void;
-  (e: "update:openedGroups", value: string[]): void;
-}>();
+import { ref, watch } from "vue";
+import NavLinkGroup from "./NavLinkGroup.vue";
+import NavLink from "./NavLink.vue";
 
 const props = defineProps({
   title: {
@@ -36,6 +31,11 @@ const props = defineProps({
     required: true,
   },
 });
+
+defineEmits<{
+  (e: "update:isOpen", value: boolean): void;
+  (e: "update:openedGroups", value: string[]): void;
+}>();
 
 const isOpenRef = ref<boolean>(props.isOpen);
 const openedGroupsRef = ref<string[]>(props.openedGroups);

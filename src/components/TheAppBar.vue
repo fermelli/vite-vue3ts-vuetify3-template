@@ -3,9 +3,6 @@ import useAdminNavigationDrawerStore from "@/store/modules/admin-navigation-draw
 import useAuthStore from "@/store/modules/auth.store";
 import { useToggleTheme } from "@/themes/use-toggle-theme";
 
-const { toggle } = useAdminNavigationDrawerStore();
-const authStore = useAuthStore();
-
 defineProps({
   title: {
     type: String,
@@ -13,8 +10,9 @@ defineProps({
   },
 });
 
-const { toggleTheme, iconChangeTheme } = useToggleTheme();
-const { logout } = authStore;
+const { iconChangeTheme, toggleTheme } = useToggleTheme();
+const { toggle } = useAdminNavigationDrawerStore();
+const { logout } = useAuthStore();
 </script>
 
 <template>
