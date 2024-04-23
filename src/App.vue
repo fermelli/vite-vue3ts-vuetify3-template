@@ -52,4 +52,3 @@ const layout = computed(() => {
   opacity: 0;
 }
 </style>
-./themes/use-set-theme

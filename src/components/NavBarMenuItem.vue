@@ -67,4 +67,3 @@ const menu = ref(false);
     </v-list>
   </v-menu>
 </template>
-@/interfaces/nav-route.interface

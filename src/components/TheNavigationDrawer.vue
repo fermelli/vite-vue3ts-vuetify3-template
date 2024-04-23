@@ -29,4 +29,3 @@ const { isOpen, openedGroups } = storeToRefs(theNavigationDrawerStore);
     </v-list>
   </v-navigation-drawer>
 </template>
-@/interfaces/nav-route.interface @/utils/index.util

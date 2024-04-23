@@ -29,4 +29,3 @@ defineProps({
     />
   </v-list-group>
 </template>
-@/interfaces/nav-route.interface

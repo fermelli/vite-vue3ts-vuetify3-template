@@ -18,4 +18,3 @@ defineProps({
     <v-list-item-title>{{ route.text }}</v-list-item-title>
   </v-list-item>
 </template>
-@/interfaces/nav-route.interface
