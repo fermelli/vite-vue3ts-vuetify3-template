@@ -58,7 +58,7 @@ watch(
     <v-list
       v-model:opened="openedGroupsRef"
       open-strategy="multiple"
-      @update:opened="$emit('update:openedGroups', $event)"
+      @update:opened="$emit('update:openedGroups', $event as string[])"
     >
       <v-list-subheader>{{ title }}</v-list-subheader>
 
