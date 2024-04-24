@@ -18,6 +18,8 @@ const getProducts = async () => {
     products.value = response.data;
   } catch (error) {
     console.log(error);
+
+    products.value = [];
   } finally {
     loading.value = false;
   }
