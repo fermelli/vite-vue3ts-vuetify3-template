@@ -6,7 +6,7 @@ const customDarkTheme: ThemeDefinition = {
     background: "#FFFFFF",
     surface: "#081120",
     primary: "#02182B",
-    secondary: "#04345E",
+    secondary: "#424242",
     success: "#163B2C",
     warning: "#DB9C1C",
     error: "#AC0F24",
