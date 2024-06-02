@@ -34,9 +34,9 @@ watch(
 </script>
 
 <template>
-  <the-nav-bar></the-nav-bar>
-
   <v-layout>
+    <the-nav-bar></the-nav-bar>
+
     <navigation-drawer
       title="Menú principal"
       :routes="routes"

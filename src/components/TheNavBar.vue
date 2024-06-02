@@ -20,7 +20,10 @@ const { toggle } = usePageNavigationDrawerStore();
 </script>
 
 <template>
-  <v-toolbar flat>
+  <v-app-bar
+    color="secondary"
+    flat
+  >
     <template #prepend>
       <router-link
         class="d-flex align-center text-decoration-none text-grey-darken-4"
@@ -35,7 +38,7 @@ const { toggle } = usePageNavigationDrawerStore();
         />
       </router-link>
 
-      <v-toolbar-title>My App</v-toolbar-title>
+      <v-app-bar-title>My App</v-app-bar-title>
     </template>
 
     <v-spacer></v-spacer>
@@ -101,7 +104,7 @@ const { toggle } = usePageNavigationDrawerStore();
       @click="toggle"
     >
     </v-btn>
-  </v-toolbar>
+  </v-app-bar>
 </template>
 
 <style scoped>
