@@ -82,7 +82,7 @@ const { toggle } = usePageNavigationDrawerStore();
           <v-icon icon="mdi-login"></v-icon>
         </template>
 
-        Iniciar Sesión
+        Sign In
       </v-btn>
 
       <v-btn
@@ -94,7 +94,7 @@ const { toggle } = usePageNavigationDrawerStore();
           <v-icon icon="mdi-logout"></v-icon>
         </template>
 
-        Cerrar Sesión
+        Logout
       </v-btn>
     </template>
 
