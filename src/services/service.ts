@@ -1,13 +1,13 @@
-import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from "axios";
-import { baseURL, contentType, timeout, errorNetworkCode, okCode } from "@/config";
+import axios, { AxiosError, AxiosResponse, HttpStatusCode, InternalAxiosRequestConfig } from "axios";
+import { accept, baseURL, contentType, errorNetworkCode } from "@/config";
 import useAuthStore from "@/store/modules/auth.store";
 import { toast } from "vue3-toastify";
 
 const service = axios.create({
   baseURL,
-  timeout,
   headers: {
     "Content-Type": contentType,
+    Accept: accept,
   },
 });
 
@@ -29,7 +29,7 @@ service.interceptors.request.use(
 
 service.interceptors.response.use(
   (response: AxiosResponse) => {
-    if (response.status === okCode) {
+    if (response.status === HttpStatusCode.Ok) {
       toast.success(response.statusText);
     }
 
