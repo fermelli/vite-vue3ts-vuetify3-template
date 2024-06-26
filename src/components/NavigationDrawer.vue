@@ -57,6 +57,7 @@ watch(
   >
     <v-list
       v-model:opened="openedGroupsRef"
+      density="compact"
       open-strategy="multiple"
       @update:opened="$emit('update:openedGroups', $event as string[])"
     >

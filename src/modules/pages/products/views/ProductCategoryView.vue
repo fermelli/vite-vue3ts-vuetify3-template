@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div>
-    <h1>ProductoView</h1>
+    <h1 class="text-h6">ProductoView</h1>
 
     <p>Category: {{ category }}</p>
   </div>

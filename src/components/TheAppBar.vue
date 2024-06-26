@@ -16,8 +16,14 @@ const { logout } = useAuthStore();
 </script>
 
 <template>
-  <v-app-bar color="primary">
-    <v-app-bar-nav-icon @click.stop="toggle" />
+  <v-app-bar
+    color="primary"
+    density="compact"
+  >
+    <v-app-bar-nav-icon
+      density="compact"
+      @click.stop="toggle"
+    />
 
     <v-app-bar-title>
       {{ title }}
@@ -29,19 +35,19 @@ const { logout } = useAuthStore();
       <template #activator="{ props }">
         <v-btn
           v-bind="props"
+          class="mx-2"
+          density="compact"
           icon
         >
-          <v-avatar
-            size="45"
-            color="primary"
-          >
-            <v-icon icon="mdi-account-circle"></v-icon>
-          </v-avatar>
+          <v-icon icon="mdi-account-circle"></v-icon>
         </v-btn>
       </template>
 
       <!-- TODO: user -->
-      <v-list v-if="true">
+      <v-list
+        v-if="true"
+        density="compact"
+      >
         <v-list-item>
           <v-list-item-title> luisfernandosalgadomiguez@gmail </v-list-item-title>
         </v-list-item>

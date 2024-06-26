@@ -28,12 +28,13 @@ const getProducts = async () => {
 
 <template>
   <div>
-    <div class="d-flex mb-4">
-      <h1>ProductosView</h1>
+    <div class="d-flex justify-between align-center">
+      <h1 class="text-h6">ProductosView</h1>
 
       <v-btn
         class="ml-2"
         color="primary"
+        density="compact"
         :disabled="loading"
         icon
         @click="getProducts"

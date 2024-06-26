@@ -16,6 +16,7 @@ const menu = ref(false);
   <v-btn
     v-if="!menuItem.children"
     class="text-none ml-4"
+    density="compact"
     :to="menuItem.to"
   >
     <template #append>
@@ -33,6 +34,7 @@ const menu = ref(false);
     <template #activator="{ isActive, props }">
       <v-btn
         class="text-none ml-4"
+        density="compact"
         v-bind="props"
       >
         {{ menuItem.text }}

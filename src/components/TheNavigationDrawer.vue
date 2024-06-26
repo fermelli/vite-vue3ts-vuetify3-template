@@ -16,6 +16,7 @@ const routes = ref<NavRoute[]>(navRoutes);
   <v-navigation-drawer v-model="isOpen">
     <v-list
       v-model:opened="openedGroups"
+      density="compact"
       open-strategy="multiple"
     >
       <v-list-subheader>Menu</v-list-subheader>

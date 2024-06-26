@@ -22,6 +22,7 @@ const { toggle } = usePageNavigationDrawerStore();
 <template>
   <v-app-bar
     color="secondary"
+    density="compact"
     flat
   >
     <template #prepend>
@@ -30,11 +31,11 @@ const { toggle } = usePageNavigationDrawerStore();
         :to="{ name: 'home' }"
       >
         <v-img
-          class="mr-4"
+          class="ml-2 mr-4"
           src="@/assets/vue.svg"
           alt="Vuetify Logo"
-          width="40"
-          height="40"
+          width="24"
+          height="24"
         />
       </router-link>
 
@@ -46,6 +47,7 @@ const { toggle } = usePageNavigationDrawerStore();
     <template v-if="width > 960">
       <v-btn
         :icon="iconChangeTheme"
+        density="compact"
         @click="toggleTheme"
       >
       </v-btn>
@@ -64,6 +66,7 @@ const { toggle } = usePageNavigationDrawerStore();
       <v-btn
         v-if="isAuthenticated"
         class="text-none ml-4"
+        density="compact"
         :to="{ name: 'dashboard' }"
       >
         <template #append>
@@ -76,6 +79,7 @@ const { toggle } = usePageNavigationDrawerStore();
       <v-btn
         v-if="!isAuthenticated"
         class="text-none ml-4"
+        density="compact"
         @click="signIn"
       >
         <template #append>
@@ -88,6 +92,7 @@ const { toggle } = usePageNavigationDrawerStore();
       <v-btn
         v-else
         class="text-none ml-4"
+        density="compact"
         @click="logout"
       >
         <template #append>

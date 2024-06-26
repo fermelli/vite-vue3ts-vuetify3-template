@@ -20,6 +20,7 @@ defineProps({
         <th class="text-right">Price</th>
       </tr>
     </thead>
+
     <tbody>
       <tr
         v-for="product in products"
